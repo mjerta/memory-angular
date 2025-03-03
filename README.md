@@ -1,59 +1,46 @@
-# AnotherAngularTest
+# Angular Card Matching Game
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+This project is a simple card matching game built with Angular. Below are the key concepts and features implemented in this project:
 
-## Development server
+## Components
 
-To start a local development server, run:
+### `AppComponent` and `CardComponent`
+- These are Angular components, defined using the `@Component` decorator.
+- Components are the building blocks of an Angular application.
 
-```bash
-ng serve
-```
+## Data Binding
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### `@Input` and `@Output` Decorators
+- Used in `CardComponent` for data binding.
+- `@Input` allows a parent component to bind properties to a child component.
+- `@Output` allows a child component to emit events to a parent component.
 
-## Code scaffolding
+## Event Binding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### `(cardClick)` Event Binding
+- Used in the `app.component.html` file.
+- Listens for the `cardClick` event emitted by the `CardComponent`.
 
-```bash
-ng generate component component-name
-```
+## Structural Directives
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### `*ngFor` Directive
+- Used in the `app.component.html` file.
+- Iterates over the `cards` array and renders an `app-card` component for each card.
 
-```bash
-ng generate --help
-```
+## Service
 
-## Building
+### `cards` Array
+- Imported from a separate data file (`cards.data.ts`).
+- Acts as a simple service providing data to the component.
 
-To build the project run:
+## CSS Styling
 
-```bash
-ng build
-```
+### Associated CSS Files
+- `app.component.css` and `card.component.css` for styling the components.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Lifecycle Hooks
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### `onCardClick` Method
+- Implemented in `AppComponent`.
+- Handles the logic when a card is clicked.
+- Demonstrates how to manage component state and interactions.
