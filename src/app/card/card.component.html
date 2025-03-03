@@ -1,0 +1,13 @@
+<div class="card"
+     [class.flipped]="flipped"
+     [class.matched]="matched"
+     (click)="flipCard()">
+  <div class="card-inner">
+    <div class="card-front">
+      <span>?</span>
+    </div>
+    <div class="card-back">
+      <span>{{ value }}</span>
+    </div>
+  </div>
+</div>
